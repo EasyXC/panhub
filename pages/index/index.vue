@@ -71,7 +71,7 @@
           <button
             v-for="p in platforms"
             :key="p"
-            :class="['filter-pill', { active: filterPlatform === p }]"
+            :class="['filter-pill'， { active: filterPlatform === p }]"
             @click="filterPlatform = p">
             {{ platformName(p) }}
           </button>
@@ -174,7 +174,7 @@ useHead({
       name: "keywords",
       content:
         "网盘搜索, 阿里云盘搜索, 夸克网盘搜索, 百度网盘搜索, 115 网盘, 迅雷云盘, 资源搜索, 盘搜, PanHub",
-    },
+    }，
   ],
   script: [
     {
@@ -904,7 +904,6 @@ function visibleSorted(items: any[]) {
     background: linear-gradient(160deg, rgba(28, 100, 242, 0.14), rgba(139, 92, 246, 0.12));
     border-color: rgba(14, 165, 233, 0.20);
   }
-
 
   .hero-badge {
     background: rgba(28, 100, 242, 0.18);
