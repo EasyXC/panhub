@@ -46,7 +46,7 @@
     <!-- 设置抽屉 -->
     <ClientOnly>
       <SettingsDrawer
-        v-model="设置"
+        v-model="settings"
         v-model:open="openSettings"
         :all-plugins="ALL_PLUGIN_NAMES"
         :all-tg-channels="allTgChannels"
@@ -63,7 +63,7 @@
     <ClientOnly>
       <PasswordGate
         :show="showPasswordGate"
-        :error="auth.error。value || ''"
+        :error="auth.error.value || ''"
         :submitting="unlockSubmitting"
         @unlock="onUnlock" />
     </ClientOnly>
