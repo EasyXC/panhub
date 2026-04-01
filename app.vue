@@ -146,23 +146,28 @@ provide('showToast', showToast);
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap");
 
 :root {
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --secondary: #f59e0b;
-  --success: #10b981;
+  /* 2026 主色：冷青蓝（科技低饱和） */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  /* 辅助色：蓝紫渐变（高级感，替代橙色） */
+  --secondary: #7c3aed;
+  --success: #059669;
   --warning: #d97706;
   --error: #ef4444;
 
-  --bg-primary: #fffdf8;
-  --bg-secondary: #f7f3ea;
-  --bg-glass: rgba(255, 253, 248, 0.86);
+  /* 背景：极浅雾白 + 降饱和，通透不刺眼 */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-glass: rgba(248, 250, 252, 0.86);
 
-  --text-primary: #1f2937;
-  --text-secondary: #4b5563;
-  --text-tertiary: #9ca3af;
+  /* 文字：更柔和的灰阶，高级不黑 */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
 
-  --border-light: #e5dfd0;
-  --border-medium: #d4c7ab;
+  /* 边框：冷灰，不发黄、更现代 */
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -189,9 +194,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Manrope", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  background: radial-gradient(circle at 12% -10%, #fff3d9 0%, transparent 42%),
-    radial-gradient(circle at 90% 8%, #d9f7f3 0%, transparent 35%),
-    #fffdf8;
+  /* 2026 通透渐变背景：冷青蓝淡雾 + 蓝紫淡雾，无油腻暖黄 */
+  background: radial-gradient(circle at 12% -10%, #dbeafe 0%, transparent 45%),
+    radial-gradient(circle at 90% 8%, #e0e7ff 0%, transparent 40%),
+    #f8fafc;
   color: var(--text-primary);
 
   /* iOS Safari兼容性 */
@@ -306,10 +312,11 @@ button {
   animation: blobFloat 8s ease-in-out infinite;
 }
 
+/* 2026 冷色 blob：青蓝 + 蓝紫，无暖橙油腻 */
 .blob-1 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
   top: -100px;
   left: -100px;
   animation-delay: 0s;
@@ -318,7 +325,7 @@ button {
 .blob-2 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #f59e0b, #fb7185);
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
   bottom: -50px;
   right: -50px;
   animation-delay: 2s;
@@ -327,7 +334,7 @@ button {
 .blob-3 {
   width: 250px;
   height: 250px;
-  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
   top: 50%;
   left: 70%;
   animation-delay: 4s;
@@ -373,7 +380,7 @@ button {
 
 .brand-icon {
   font-size: 24px;
-  filter: drop-shadow(0 2px 4px rgba(15, 118, 110, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
 }
 
 .brand-text {
@@ -517,27 +524,27 @@ button {
   }
 }
 
-/* 深色模式支持 */
+/* 深色模式支持 —— 2026 高级深空冷色 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #111827;
-    --bg-secondary: #1f2937;
-    --bg-glass: rgba(17, 24, 39, 0.76);
-    --text-primary: #f3f4f6;
-    --text-secondary: #d1d5db;
-    --text-tertiary: #6b7280;
-    --border-light: #374151;
-    --border-medium: #4b5563;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-glass: rgba(15, 23, 42, 0.76);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #64748b;
+    --border-light: #334155;
+    --border-medium: #475569;
   }
 
   body {
-    background: radial-gradient(circle at 12% -10%, #0f3d37 0%, transparent 42%),
-      radial-gradient(circle at 90% 8%, #4a2d08 0%, transparent 35%),
-      #0b1220;
+    background: radial-gradient(circle at 12% -10%, #1e3a8a 0%, transparent 45%),
+      radial-gradient(circle at 90% 8%, #4c1d95 0%, transparent 40%),
+      #020617;
   }
 
   .header {
-    background: rgba(17, 24, 39, 0.7);
+    background: rgba(15, 23, 42, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -587,38 +594,6 @@ button {
 
   .blob {
     animation: none;
-  }
-}
-  /* QQ群图标 - 右上角固定悬浮 */
-.fixed-qq {
-  position: fixed;
-  top: 18px;
-  right: 24px;
-  z-index: 98; /* 低于导航栏，不遮挡按钮 */
-  transition: transform 0.2s ease;
-}
-
-.fixed-qq img {
-  width: 42px;    /* 严格限制宽度 */
-  height: 42px;   /* 严格限制高度 */
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.fixed-qq:hover {
-  transform: scale(1.08); /* 轻微放大，高级感 */
-}
-
-/* 移动端自适应缩小 */
-@media (max-width: 640px) {
-  .fixed-qq {
-    top: 14px;
-    right: 16px;
-  }
-  .qq-group-corner img {
-    width: 36px;
-    height: 36px;
   }
 }
 </style>
