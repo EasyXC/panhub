@@ -12,12 +12,12 @@
       <nav class="nav">
         <NuxtLink to="/" class="brand">
           <span class="brand-icon">🔍</span>
-          <span class="brand-text">EasyPanHub</span>
+          <span class="brand-text">PanHub</span>
         </NuxtLink>
         <div class="nav-actions">
           <!-- GitHub 链接 
           <a
-            href="https://github.com/EasyXC/PanHub"
+            href="https://github.com/EasyXC/panhub"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-icon github-btn"
@@ -227,7 +227,7 @@ body {
 
 /* 输入框基础样式 */
 input[type="text"],
-input[type="search"],
+input[输入="search"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
