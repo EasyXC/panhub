@@ -62,7 +62,7 @@ export default defineNuxtConfig({
     cacheTtlMinutes: channelsConfig.cacheTtlMinutes,
     公共: {
       apiBase: "/api",
-      siteUrl: "https://pan.easy123.dpdns.org/",
+      siteUrl: "https://pan.easy321.top",
       // 向前端暴露默认频道清单
       tgDefaultChannels: channelsConfig.defaultChannels,
     },
