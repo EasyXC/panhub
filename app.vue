@@ -12,12 +12,12 @@
       <nav class="nav">
         <NuxtLink to="/" class="brand">
           <span class="brand-icon">🔍</span>
-          <span class="brand-text">PanHub</span>
+          <span class="brand-text">EasyPanHub</span>
         </NuxtLink>
         <div class="nav-actions">
           <!-- GitHub 链接 
           <a
-            href="https://github.com/EasyXC/panhub"
+            href="https://github.com/EasyXC/PanHub"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-icon github-btn"
