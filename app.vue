@@ -46,7 +46,7 @@
     <!-- 设置抽屉 -->
     <ClientOnly>
       <SettingsDrawer
-        v-model="settings"
+        v-model="设置"
         v-model:open="openSettings"
         :all-plugins="ALL_PLUGIN_NAMES"
         :all-tg-channels="allTgChannels"
@@ -63,7 +63,7 @@
     <ClientOnly>
       <PasswordGate
         :show="showPasswordGate"
-        :error="auth.error.value || ''"
+        :error="auth.error。value || ''"
         :submitting="unlockSubmitting"
         @unlock="onUnlock" />
     </ClientOnly>
@@ -141,6 +141,7 @@ onMounted(() => {
 provide('showToast', showToast);
 </script>
 
+<style>
 /* 全局样式重置和现代化设计系统 */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap");
 
