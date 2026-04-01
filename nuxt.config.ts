@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: "zh-CN" },
-      title: "PanHub · 全网最全的网盘搜索",
-      titleTemplate: "%s · PanHub",
+      title: "EasyPanHub · 全网最全的网盘搜索",
+      titleTemplate: "%s · EasyPanHub",
       meta: [
         {
           name: "viewport",
@@ -18,18 +18,18 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "PanHub：聚合阿里云盘、夸克、百度网盘、115、迅雷等平台的全网最全网盘搜索工具，实时检索分享资源，免费、快速、无广告。",
+            "EasyPanHub：聚合阿里云盘、夸克、百度网盘、115、迅雷等平台的全网最全网盘搜索工具，实时检索分享资源，免费、快速、无广告。",
         },
         {
           name: "keywords",
           content:
-            "网盘搜索, 阿里云盘, 夸克, 百度网盘, 115, 迅雷, 资源搜索, 盘搜, panhub, 网盘聚合搜索",
+            "网盘搜索, 阿里云盘, 夸克, 百度网盘, 115, 迅雷, 资源搜索, 盘搜, EasyPanHub, 网盘聚合搜索",
         },
         { name: "theme-color", content: "#111111" },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "PanHub" },
+        { property: "og:site_name", content: "EasyPanHub" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", 输入: "image/x-icon", href: "/favicon.ico" }],
     },
   },
   nitro: {
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
     cacheTtlMinutes: channelsConfig.cacheTtlMinutes,
     公共: {
       apiBase: "/api",
-      siteUrl: "https://pan.easy123.dpdns.org/",
+      siteUrl: "https://pan.easy321.top",
       // 向前端暴露默认频道清单
       tgDefaultChannels: channelsConfig.defaultChannels,
     },
