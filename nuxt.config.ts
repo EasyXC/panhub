@@ -60,9 +60,9 @@ export default defineNuxtConfig({
     pluginTimeoutMs: channelsConfig.pluginTimeoutMs,
     cacheEnabled: true,
     cacheTtlMinutes: channelsConfig.cacheTtlMinutes,
-    public: {
+    公共: {
       apiBase: "/api",
-      siteUrl: "https://panhub.shenzjd.com",
+      siteUrl: "https://pan.easy123.dpdns.org/",
       // 向前端暴露默认频道清单
       tgDefaultChannels: channelsConfig.defaultChannels,
     },
