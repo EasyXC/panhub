@@ -141,28 +141,32 @@ onMounted(() => {
 provide('showToast', showToast);
 </script>
 
-<style>
 /* 全局样式重置和现代化设计系统 */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap");
 
 :root {
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --secondary: #f59e0b;
-  --success: #10b981;
-  --warning: #d97706;
-  --error: #ef4444;
+  /* 🎨 主色：冷青科技蓝（2026主流科技色） */
+  --primary: #165DFF;
+  --primary-dark: #0E42D2;
+  /* 🎨 辅助色：蓝紫渐变（替代橙色） */
+  --secondary: #7B61FF;
+  --success: #36D399;
+  --warning: #FBBD23;
+  --error: #F87272;
 
-  --bg-primary: #fffdf8;
-  --bg-secondary: #f7f3ea;
-  --bg-glass: rgba(255, 253, 248, 0.86);
+  /* 🎨 背景：低饱和冷白 + 高通透 */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-glass: rgba(248, 250, 252, 0.8);
 
-  --text-primary: #1f2937;
-  --text-secondary: #4b5563;
-  --text-tertiary: #9ca3af;
+  /* 🎨 文字：冷调高级灰 */
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-tertiary: #94A3B8;
 
-  --border-light: #e5dfd0;
-  --border-medium: #d4c7ab;
+  /* 🎨 边框：冷调极简灰 */
+  --border-light: #E2E8F0;
+  --border-medium: #CBD5E1;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -189,9 +193,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Manrope", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  background: radial-gradient(circle at 12% -10%, #fff3d9 0%, transparent 42%),
-    radial-gradient(circle at 90% 8%, #d9f7f3 0%, transparent 35%),
-    #fffdf8;
+  /* 🎨 背景渐变：冷青+蓝紫 低饱和通透版 */
+  background: radial-gradient(circle at 12% -10%, #E0F2FE 0%, transparent 42%),
+    radial-gradient(circle at 90% 8%, #EEF2FF 0%, transparent 35%),
+    #F8FAFC;
   color: var(--text-primary);
 
   /* iOS Safari兼容性 */
@@ -302,32 +307,35 @@ button {
   position: absolute;
   border-radius: 50%;
   filter: blur(48px);
-  opacity: 0.28;
+  opacity: 0.2; /* 🎨 降低透明度，消除油腻感 */
   animation: blobFloat 8s ease-in-out infinite;
 }
 
+/* 🎨 冷青蓝主色渐变 */
 .blob-1 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  background: linear-gradient(135deg, #165DFF, #3B82F6);
   top: -100px;
   left: -100px;
   animation-delay: 0s;
 }
 
+/* 🎨 蓝紫辅助色渐变（替代原橙粉） */
 .blob-2 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #f59e0b, #fb7185);
+  background: linear-gradient(135deg, #7B61FF, #A78BFA);
   bottom: -50px;
   right: -50px;
   animation-delay: 2s;
 }
 
+/* 🎨 冷青蓝渐变 */
 .blob-3 {
   width: 250px;
   height: 250px;
-  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+  background: linear-gradient(135deg, #3B82F6, #165DFF);
   top: 50%;
   left: 70%;
   animation-delay: 4s;
@@ -373,9 +381,10 @@ button {
 
 .brand-icon {
   font-size: 24px;
-  filter: drop-shadow(0 2px 4px rgba(15, 118, 110, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(22, 93, 255, 0.3));
 }
 
+/* 🎨 品牌文字：冷青蓝+蓝紫渐变 */
 .brand-text {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -517,27 +526,27 @@ button {
   }
 }
 
-/* 深色模式支持 */
+/* 深色模式支持 🎨 同步冷调科技深色 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #111827;
-    --bg-secondary: #1f2937;
-    --bg-glass: rgba(17, 24, 39, 0.76);
-    --text-primary: #f3f4f6;
-    --text-secondary: #d1d5db;
-    --text-tertiary: #6b7280;
-    --border-light: #374151;
-    --border-medium: #4b5563;
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-glass: rgba(15, 23, 42, 0.7);
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-tertiary: #64748B;
+    --border-light: #334155;
+    --border-medium: #475569;
   }
 
   body {
-    background: radial-gradient(circle at 12% -10%, #0f3d37 0%, transparent 42%),
-      radial-gradient(circle at 90% 8%, #4a2d08 0%, transparent 35%),
-      #0b1220;
+    background: radial-gradient(circle at 12% -10%, #1E3A8A 0%, transparent 42%),
+      radial-gradient(circle at 90% 8%, #3E2B8F 0%, transparent 35%),
+      #0F172A;
   }
 
   .header {
-    background: rgba(17, 24, 39, 0.7);
+    background: rgba(15, 23, 42, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -562,6 +571,16 @@ button {
   .toast {
     background: var(--bg-secondary);
     border-color: var(--border-light);
+  }
+
+  .blob-1 {
+    background: linear-gradient(135deg, #165DFF, #3B82F6);
+  }
+  .blob-2 {
+    background: linear-gradient(135deg, #7B61FF, #A78BFA);
+  }
+  .blob-3 {
+    background: linear-gradient(135deg, #3B82F6, #165DFF);
   }
 }
 
