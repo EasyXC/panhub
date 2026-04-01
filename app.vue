@@ -155,24 +155,24 @@ provide('showToast', showToast);
   --warning: #d97706;
   --error: #ef4444;
 
-  /* 背景：极浅雾白 + 降饱和，通透不刺眼 */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-glass: rgba(248, 250, 252, 0.86);
+  /* 背景：干净白底，不发灰、不发蓝 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.88);
 
-  /* 文字：更柔和的灰阶，高级不黑 */
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-tertiary: #64748b;
+  /* 文字：提高对比度，白底绝对清晰 */
+  --text-primary: #111827;  /* 加深，清晰黑 */
+  --text-secondary: #374151;/* 次级文字清晰可读 */
+  --text-tertiary: #6b7280;/* 弱文字不模糊 */
 
-  /* 边框：冷灰，不发黄、更现代 */
-  --border-light: #e2e8f0;
-  --border-medium: #cbd5e1;
+  /* 边框：柔和冷灰 */
+  --border-light: #f1f5f9;
+  --border-medium: #e2e8f0;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1 rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px -3 rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5 rgba(0, 0, 0, 0.08);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -194,13 +194,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Manrope", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  /* 2026 通透渐变背景：冷青蓝淡雾 + 蓝紫淡雾，无油腻暖黄 */
-  background: radial-gradient(circle at 12% -10%, #dbeafe 0%, transparent 45%),
-    radial-gradient(circle at 90% 8%, #e0e7ff 0%, transparent 40%),
-    #f8fafc;
+  /* 极淡渐变，不影响白底清晰度 */
+  background: radial-gradient(circle at 12% -10%, #eff6ff 0%, transparent 50%),
+    radial-gradient(circle at 90% 8%, #f5f3ff 0%, transparent 45%),
+    #ffffff;
   color: var(--text-primary);
 
-  /* iOS Safari兼容性 */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
@@ -307,12 +306,11 @@ button {
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(48px);
-  opacity: 0.28;
+  filter: blur(60px);
+  opacity: 0.22; /* 降低透明度，不干扰文字 */
   animation: blobFloat 8s ease-in-out infinite;
 }
 
-/* 2026 冷色 blob：青蓝 + 蓝紫，无暖橙油腻 */
 .blob-1 {
   width: 400px;
   height: 400px;
@@ -345,7 +343,7 @@ button {
   background: var(--bg-glass);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--border-light);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -411,11 +409,11 @@ button {
   transition: background-color var(--transition-fast), color var(--transition-fast),
     transform var(--transition-fast), box-shadow var(--transition-fast);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border-light);
 }
 
 .btn-icon:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -435,7 +433,7 @@ button {
 
 .github-btn:hover {
   color: var(--primary);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .github-btn svg {
@@ -460,7 +458,7 @@ button {
   right: 24px;
   padding: 12px 20px;
   border-radius: var(--radius-md);
-  background: var(--bg-primary);
+  background: #ffffff;
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--border-light);
   font-weight: 500;
@@ -520,50 +518,47 @@ button {
   }
 
   .blob {
-    filter: blur(40px);
+    filter: blur(50px);
   }
 }
 
-/* 深色模式支持 —— 2026 高级深空冷色 */
+/* 深色模式 */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
-    --bg-glass: rgba(15, 23, 42, 0.76);
+    --bg-glass: rgba(15, 23, 42, 0.8);
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-tertiary: #64748b;
-    --border-light: #334155;
-    --border-medium: #475569;
+    --border-light: #1e293b;
+    --border-medium: #334155;
   }
 
   body {
-    background: radial-gradient(circle at 12% -10%, #1e3a8a 0%, transparent 45%),
-      radial-gradient(circle at 90% 8%, #4c1d95 0%, transparent 40%),
-      #020617;
-  }
-
-  .header {
-    background: rgba(15, 23, 42, 0.7);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .btn-icon {
-    background: rgba(255, 255, 255, 0.1);
+    background: radial-gradient(circle at 12% -10%, #1e3a8a 0%, transparent 50%),
+      radial-gradient(circle at 90% 8%, #4c1d95 0%, transparent 45%),
+      #0f172a;
     color: var(--text-primary);
   }
 
+  .header {
+    background: var(--bg-glass);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .btn-icon {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+    border-color: transparent;
+  }
+
   .btn-icon:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .github-btn {
-    color: rgba(148, 163, 184, 0.6);
-  }
-
-  .github-btn:hover {
-    color: var(--primary);
-    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-tertiary);
   }
 
   .toast {
