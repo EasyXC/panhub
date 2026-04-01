@@ -390,9 +390,9 @@ function visibleSorted(items: any[]) {
   align-items: stretch;
   gap: 0;
   position: relative;
-  background: linear-gradient(145deg, rgba(15, 118, 110, 0.12) 0%, rgba(15, 118, 110, 0.04) 35%, rgba(245, 158, 11, 0.06) 70%, rgba(15, 118, 110, 0.08) 100%);
+  background: linear-gradient(145deg, rgba(21, 94, 117, 0.12) 0%, rgba(21, 94, 117, 0.04) 35%, rgba(244, 114, 182, 0.06) 70%, rgba(21, 94, 117, 0.08) 100%);
   border-radius: 20px;
-  box-shadow: 0 4px 20px -4px rgba(15, 118, 110, 0.15);
+  box-shadow: 0 4px 20px -4px rgba(21, 94, 117, 0.15);
   overflow: hidden;
 }
 
@@ -437,11 +437,11 @@ function visibleSorted(items: any[]) {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: #155e75;
   margin-bottom: 10px;
   padding: 6px 12px;
-  background: rgba(15, 118, 110, 0.12);
-  border: 1px solid rgba(15, 118, 110, 0.25);
+  background: rgba(21, 94, 117, 0.12);
+  border: 1px solid rgba(21, 94, 117, 0.25);
   border-radius: 8px;
   font-family: "Manrope", sans-serif;
   animation: heroReveal 0.6s ease-out both;
@@ -466,7 +466,7 @@ function visibleSorted(items: any[]) {
 }
 
 .hero-title-line--accent {
-  background: linear-gradient(120deg, var(--primary) 0%, #0d9488 40%, var(--secondary) 100%);
+  background: linear-gradient(120deg, #155e75 0%, #0e7490 40%, #f472b6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -495,10 +495,10 @@ function visibleSorted(items: any[]) {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--primary-dark);
+  color: #155e75;
   padding: 6px 12px;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(15, 118, 110, 0.2);
+  border: 1px solid rgba(21, 94, 117, 0.2);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   animation: heroReveal 0.6s ease-out both;
@@ -510,8 +510,8 @@ function visibleSorted(items: any[]) {
 
 .hero-feature:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
-  border-color: rgba(15, 118, 110, 0.35);
+  box-shadow: 0 4px 12px rgba(21, 94, 117, 0.15);
+  border-color: rgba(21, 94, 117, 0.35);
 }
 
 .hero-shape {
@@ -520,7 +520,7 @@ function visibleSorted(items: any[]) {
   bottom: 10%;
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.15) 0%, rgba(245, 158, 11, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(21, 94, 117, 0.15) 0%, rgba(244, 114, 182, 0.08) 100%);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   filter: blur(24px);
   pointer-events: none;
@@ -605,7 +605,7 @@ function visibleSorted(items: any[]) {
 .stat-value {
   font-size: 18px;
   font-weight: 700;
-  color: var(--primary);
+  color: #155e75;
 }
 
 /* 加载指示器 */
@@ -614,22 +614,22 @@ function visibleSorted(items: any[]) {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: rgba(15, 118, 110, 0.1);
+  background: rgba(21, 94, 117, 0.1);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(15, 118, 110, 0.2);
+  border: 1px solid rgba(21, 94, 117, 0.2);
 }
 
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: var(--primary);
+  background: #155e75;
   border-radius: 50%;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
 .loading-text {
   font-size: 13px;
-  color: var(--primary);
+  color: #155e75;
   font-weight: 500;
 }
 
@@ -639,10 +639,10 @@ function visibleSorted(items: any[]) {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(244, 114, 182, 0.1);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  color: #f59e0b;
+  border: 1px solid rgba(244, 114, 182, 0.3);
+  color: #db2777;
   font-weight: 500;
 }
 
@@ -684,10 +684,10 @@ function visibleSorted(items: any[]) {
 }
 
 .filter-pill.active {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, #155e75, #f472b6);
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.28);
+  box-shadow: 0 4px 12px rgba(21, 94, 117, 0.28);
 }
 
 /* 排序选择器 */
@@ -718,8 +718,8 @@ function visibleSorted(items: any[]) {
 
 .sort-select:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+  border-color: #155e75;
+  box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.12);
 }
 
 /* 搜索结果区域 */
@@ -901,25 +901,24 @@ function visibleSorted(items: any[]) {
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   .hero-row {
-    background: linear-gradient(160deg, rgba(15, 118, 110, 0.16), rgba(245, 158, 11, 0.14));
-    border-color: rgba(45, 212, 191, 0.24);
+    background: linear-gradient(160deg, rgba(21, 94, 117, 0.16), rgba(244, 114, 182, 0.14));
+    border-color: rgba(34, 211, 238, 0.24);
   }
 
-
   .hero-badge {
-    background: rgba(15, 118, 110, 0.25);
-    color: #5eead4;
-    border-color: rgba(45, 212, 191, 0.3);
+    background: rgba(21, 94, 117, 0.25);
+    color: #22d3ee;
+    border-color: rgba(34, 211, 238, 0.3);
   }
 
   .hero-feature {
-    color: #99f6e4;
-    background: rgba(15, 118, 110, 0.2);
-    border-color: rgba(45, 212, 191, 0.25);
+    color: #a5f3fc;
+    background: rgba(21, 94, 117, 0.2);
+    border-color: rgba(34, 211, 238, 0.25);
   }
 
   .hero-feature:hover {
-    border-color: rgba(45, 212, 191, 0.45);
+    border-color: rgba(34, 211, 238, 0.45);
   }
 
   .stat-item {
@@ -928,8 +927,8 @@ function visibleSorted(items: any[]) {
   }
 
   .loading-indicator {
-    background: rgba(15, 118, 110, 0.18);
-    border-color: rgba(15, 118, 110, 0.3);
+    background: rgba(21, 94, 117, 0.18);
+    border-color: rgba(21, 94, 117, 0.3);
   }
 
   .filter-pill {
@@ -960,16 +959,12 @@ function visibleSorted(items: any[]) {
     background: rgba(239, 68, 68, 0.15);
     border-color: rgba(239, 68, 68, 0.4);
   }
-
-  .hot-search-section {
-    /* HotSearchSection 组件内部已支持深色模式 */
-  }
 }
 
 /* 高对比度模式支持 */
 @media (prefers-contrast: high) {
   .hero-title-line--accent {
-    -webkit-text-fill-color: var(--primary);
+    -webkit-text-fill-color: #155e75;
     background: none;
   }
 
