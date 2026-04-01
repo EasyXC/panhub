@@ -6,7 +6,7 @@
       <header class="hero">
         <div class="hero-accent" aria-hidden="true" />
         <div class="hero-content">
-          <div class="hero-badge">PanHub 搜索聚合引擎</div>
+          <div class="hero-badge">EasyPanHub 网盘搜索聚合引擎</div>
           <h1 class="hero-title">
             <span class="hero-title-line">一键检索</span>
             <span class="hero-title-line hero-title-line--accent">全网网盘资源</span>
@@ -135,8 +135,8 @@ import { ref, onMounted, nextTick } from "vue";
 import { PLATFORM_INFO } from "~/config/plugins";
 
 const config = useRuntimeConfig();
-const apiBase = (config.public?.apiBase as string) || "/api";
-const siteUrl = (config.public?.siteUrl as string) || "";
+const apiBase = (config.公共?.apiBase as string) || "/api";
+const siteUrl = (config.公共?.siteUrl as string) || "";
 
 // 热搜组件引用
 const hotSearchRef = ref<InstanceType<typeof HotSearchSection> | null>(null);
@@ -151,17 +151,17 @@ onMounted(async () => {
 
 // SEO 元数据
 useSeoMeta({
-  title: "PanHub - 全网最全的网盘搜索",
+  title: "EasyPanHub - 全网最全的网盘搜索",
   description:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
-  ogTitle: "PanHub - 全网最全的网盘搜索",
+  ogTitle: "EasyPanHub - 全网最全的网盘搜索",
   ogDescription:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
   ogType: "website",
-  ogSiteName: "PanHub",
+  ogSiteName: "EasyPanHub",
   ogImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
   twitterCard: "summary_large_image",
-  twitterTitle: "PanHub - 全网最全的网盘搜索",
+  twitterTitle: "EasyPanHub - 全网最全的网盘搜索",
   twitterDescription:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
   twitterImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
@@ -173,16 +173,16 @@ useHead({
     {
       name: "keywords",
       content:
-        "网盘搜索, 阿里云盘搜索, 夸克网盘搜索, 百度网盘搜索, 115 网盘, 迅雷云盘, 资源搜索, 盘搜, PanHub",
+        "网盘搜索, 阿里云盘搜索, 夸克网盘搜索, 百度网盘搜索, 115 网盘, 迅雷云盘, 资源搜索, 盘搜, EasyPanHub",
     },
   ],
   script: [
     {
-      type: "application/ld+json",
+      输入: "application/ld+json",
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "PanHub",
+        name: "EasyPanHub",
         url: siteUrl || "",
         potentialAction: {
           "@type": "SearchAction",
@@ -191,7 +191,7 @@ useHead({
         },
       }),
     },
-  ],
+  ]，
 });
 
 // 搜索相关状态
