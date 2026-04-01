@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "EasyPanHub" },
       ],
-      link: [{ rel: "icon", 输入: "image/x-icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
   nitro: {
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
     cacheTtlMinutes: channelsConfig.cacheTtlMinutes,
     公共: {
       apiBase: "/api",
-      siteUrl: "https://pan.easy321.top",
+      siteUrl: "https://pan.easy123.dpdns.org/",
       // 向前端暴露默认频道清单
       tgDefaultChannels: channelsConfig.defaultChannels,
     },
