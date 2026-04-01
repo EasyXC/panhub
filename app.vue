@@ -581,4 +581,36 @@ button {
     animation: none;
   }
 }
+  /* QQ群图标 - 右上角固定悬浮 */
+.fixed-qq {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 98; /* 低于导航栏，不遮挡按钮 */
+  transition: transform 0.2s ease;
+}
+
+.fixed-qq img {
+  width: 42px;    /* 严格限制宽度 */
+  height: 42px;   /* 严格限制高度 */
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.fixed-qq:hover {
+  transform: scale(1.08); /* 轻微放大，高级感 */
+}
+
+/* 移动端自适应缩小 */
+@media (max-width: 640px) {
+  .fixed-qq {
+    top: 14px;
+    right: 16px;
+  }
+  .qq-group-corner img {
+    width: 36px;
+    height: 36px;
+  }
+}
 </style>
