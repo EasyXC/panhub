@@ -366,7 +366,7 @@ function sortItems(items: any[]) {
       return arr.sort((a, b) =>
         String(b.note || "").localeCompare(String(a.note || ""), "zh-CN")
       );
-    default:
+    默认:
       return items;
   }
 }
@@ -390,9 +390,9 @@ function visibleSorted(items: any[]) {
   align-items: stretch;
   gap: 0;
   position: relative;
-  background: linear-gradient(145deg, rgba(22, 139, 155, 0.10) 0%, rgba(22, 139, 155, 0.03) 40%, rgba(79, 70, 229, 0.05) 70%, rgba(124, 58, 237, 0.06) 100%);
+  background: linear-gradient(145deg, rgba(28, 100, 242, 0.10) 0%, rgba(28, 100, 242, 0.03) 35%, rgba(139, 92, 246, 0.05) 70%, rgba(28, 100, 242, 0.07) 100%);
   border-radius: 20px;
-  box-shadow: 0 4px 20px -4px rgba(22, 139, 155, 0.10);
+  box-shadow: 0 4px 20px -4px rgba(28, 100, 242, 0.10);
   overflow: hidden;
 }
 
@@ -437,11 +437,11 @@ function visibleSorted(items: any[]) {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #168B9B;
+  color: var(--primary);
   margin-bottom: 10px;
   padding: 6px 12px;
-  background: rgba(22, 139, 155, 0.10);
-  border: 1px solid rgba(22, 139, 155, 0.20);
+  background: rgba(28, 100, 242, 0.10);
+  border: 1px solid rgba(28, 100, 242, 0.20);
   border-radius: 8px;
   font-family: "Manrope", sans-serif;
   animation: heroReveal 0.6s ease-out both;
@@ -466,7 +466,7 @@ function visibleSorted(items: any[]) {
 }
 
 .hero-title-line--accent {
-  background: linear-gradient(120deg, #168B9B 0%, #0EA6E6 50%, #7C3AED 100%);
+  background: linear-gradient(120deg, #1c64f2 0%, #3b82f6 40%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -495,10 +495,10 @@ function visibleSorted(items: any[]) {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #168B9B;
+  color: var(--primary-dark);
   padding: 6px 12px;
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(22, 139, 155, 0.18);
+  border: 1px solid rgba(28, 100, 242, 0.15);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   animation: heroReveal 0.6s ease-out both;
@@ -510,8 +510,8 @@ function visibleSorted(items: any[]) {
 
 .hero-feature:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(22, 139, 155, 0.10);
-  border-color: rgba(22, 139, 155, 0.30);
+  box-shadow: 0 4px 12px rgba(28, 100, 242, 0.10);
+  border-color: rgba(28, 100, 242, 0.25);
 }
 
 .hero-shape {
@@ -520,7 +520,7 @@ function visibleSorted(items: any[]) {
   bottom: 10%;
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, rgba(22, 139, 155, 0.12) 0%, rgba(124, 58, 237, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(28, 100, 242, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   filter: blur(24px);
   pointer-events: none;
@@ -605,7 +605,7 @@ function visibleSorted(items: any[]) {
 .stat-value {
   font-size: 18px;
   font-weight: 700;
-  color: #168B9B;
+  color: var(--primary);
 }
 
 /* 加载指示器 */
@@ -614,22 +614,22 @@ function visibleSorted(items: any[]) {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: rgba(22, 139, 155, 0.08);
+  background: rgba(28, 100, 242, 0.08);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(22, 139, 155, 0.16);
+  border: 1px solid rgba(28, 100, 242, 0.18);
 }
 
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: #168B9B;
+  background: var(--primary);
   border-radius: 50%;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
 .loading-text {
   font-size: 13px;
-  color: #168B9B;
+  color: var(--primary);
   font-weight: 500;
 }
 
@@ -639,10 +639,10 @@ function visibleSorted(items: any[]) {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: rgba(124, 58, 237, 0.08);
+  background: rgba(139, 92, 246, 0.08);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(124, 58, 237, 0.25);
-  color: #6D28D9;
+  border: 1px solid rgba(139, 92, 246, 0.20);
+  color: #8b5cf6;
   font-weight: 500;
 }
 
@@ -684,10 +684,10 @@ function visibleSorted(items: any[]) {
 }
 
 .filter-pill.active {
-  background: linear-gradient(135deg, #168B9B, #7C3AED);
+  background: linear-gradient(135deg, #1c64f2, #8b5cf6);
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(22, 139, 155, 0.15);
+  box-shadow: 0 4px 12px rgba(28, 100, 242, 0.20);
 }
 
 /* 排序选择器 */
@@ -718,8 +718,8 @@ function visibleSorted(items: any[]) {
 
 .sort-select:focus {
   outline: none;
-  border-color: #168B9B;
-  box-shadow: 0 0 0 3px rgba(22, 139, 155, 0.10);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(28, 100, 242, 0.10);
 }
 
 /* 搜索结果区域 */
@@ -777,11 +777,11 @@ function visibleSorted(items: any[]) {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
   border-radius: var(--radius-md);
   padding: 12px 16px;
-  color: #EF4444;
+  color: var(--error);
   font-weight: 500;
   animation: fadeIn 0.3s ease;
 }
@@ -887,29 +887,39 @@ function visibleSorted(items: any[]) {
   .empty-card h3 {
     font-size: 18px;
   }
+
+  .suggestions-card {
+    padding: 16px;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
 
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   .hero-row {
-    background: linear-gradient(160deg, rgba(22, 139, 155, 0.12), rgba(124, 58, 237, 0.10));
-    border-color: rgba(34, 211, 238, 0.15);
+    background: linear-gradient(160deg, rgba(28, 100, 242, 0.14), rgba(139, 92, 246, 0.12));
+    border-color: rgba(14, 165, 233, 0.20);
   }
 
+
   .hero-badge {
-    background: rgba(22, 139, 155, 0.15);
-    color: #22D3EE;
-    border-color: rgba(34, 211, 238, 0.20);
+    background: rgba(28, 100, 242, 0.18);
+    color: #93c5fd;
+    border-color: rgba(14, 165, 233, 0.25);
   }
 
   .hero-feature {
-    color: #A5F3FC;
-    background: rgba(22, 139, 155, 0.12);
-    border-color: rgba(34, 211, 238, 0.18);
+    color: #bfdbfe;
+    background: rgba(28, 100, 242, 0.12);
+    border-color: rgba(14, 165, 233, 0.20);
   }
 
   .hero-feature:hover {
-    border-color: rgba(34, 211, 238, 0.30);
+    border-color: rgba(14, 165, 233, 0.35);
   }
 
   .stat-item {
@@ -918,8 +928,8 @@ function visibleSorted(items: any[]) {
   }
 
   .loading-indicator {
-    background: rgba(22, 139, 155, 0.12);
-    border-color: rgba(22, 139, 155, 0.20);
+    background: rgba(28, 100, 242, 0.14);
+    border-color: rgba(28, 100, 242, 0.22);
   }
 
   .filter-pill {
@@ -947,15 +957,15 @@ function visibleSorted(items: any[]) {
   }
 
   .error-alert {
-    background: rgba(239, 68, 68, 0.10);
-    border-color: rgba(239, 68, 68, 0.30);
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.35);
   }
 }
 
 /* 高对比度模式支持 */
 @media (prefers-contrast: high) {
   .hero-title-line--accent {
-    -webkit-text-fill-color: #168B9B;
+    -webkit-text-fill-color: var(--primary);
     background: none;
   }
 
@@ -969,6 +979,10 @@ function visibleSorted(items: any[]) {
   }
 
   .sort-select {
+    border-width: 2px;
+  }
+
+  .tag {
     border-width: 2px;
   }
 }
